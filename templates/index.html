@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+<style type="text/css">
+    body {
+        background: #ddd;
+        font-size: 15px;
+    }
+    .login-form {
+        border: 1px solid #eee;
+        background: #fff;
+        padding: 30px 40px;
+        border-radius: 3px;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="ui two column centered grid">
+    <div class="column">
+        <form class="ui form">
+            <div class="ui stacked segment">
+                <div class="ui medium header">Login</div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="email" placeholder="E-mail address">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="ui teal submit button">Login</div>
+                <br>
+                <div class="ui tiny header">Dont have an account? Sign up</div>
+            </div>
+
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
+{% endblock %}
