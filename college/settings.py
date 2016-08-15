@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTHENTICATION_BACKENDS = [
+    'college.backends.EmailOrUsernameModelBackend', # Login w/ email
+    'django.contrib.auth.backends.ModelBackend', # Login w/ username
+]
 
 # Application definition
 
